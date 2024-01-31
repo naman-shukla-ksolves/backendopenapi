@@ -1,5 +1,5 @@
 const textService = require('../services/textService');
-const { chatGPTApiKey } = require('../config/config');
+const chatGPTApiKey = process.env.chatGPTApiKey;
 
 async function generateText(req, res) {
     const { frequency_penalty, max_token, presence_penalty, question, top_p } = req.body;
